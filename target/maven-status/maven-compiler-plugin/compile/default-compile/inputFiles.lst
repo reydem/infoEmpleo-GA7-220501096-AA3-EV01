@@ -1,0 +1,9 @@
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/controlador/IndexControlador.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/ZonaFitWeb.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/gui/ZonaFitForma.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/ZonaFitApplication.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/servicio/IClienteServicio.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/ZonaFitSwing.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/modelo/Cliente.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/repositorio/ClienteRepositorio.java
+/webapps/universidad_java/ZonaFitSpring/src/main/java/gm/zona_fit/servicio/ClienteServicio.java

@@ -1,0 +1,5 @@
+gm/zona_fit/servicio/ClienteServicio.class
+gm/zona_fit/modelo/Cliente.class
+gm/zona_fit/repositorio/ClienteRepositorio.class
+gm/zona_fit/servicio/IClienteServicio.class
+gm/zona_fit/ZonaFitApplication.class
