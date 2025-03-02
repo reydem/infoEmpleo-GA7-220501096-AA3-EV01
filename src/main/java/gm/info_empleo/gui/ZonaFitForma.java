@@ -14,7 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 //@Component
-public class ZonaFitForma extends JFrame{
+public class InfoEmpleoForma extends JFrame{
     private JPanel panelPrincipal;
     private JTable clientesTabla;
     private JTextField nombreTexto;
@@ -28,7 +28,7 @@ public class ZonaFitForma extends JFrame{
     private Integer idCliente;
 
     @Autowired
-    public ZonaFitForma(ClienteServicio clienteServicio){
+    public InfoEmpleoForma(ClienteServicio clienteServicio){
         this.clienteServicio = clienteServicio;
         iniciarForma();
         guardarButton.addActionListener(e -> guardarCliente());

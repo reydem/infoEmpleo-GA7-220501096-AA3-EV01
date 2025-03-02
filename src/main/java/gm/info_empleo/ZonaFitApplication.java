@@ -14,20 +14,20 @@ import java.util.List;
 import java.util.Scanner;
 
 //@SpringBootApplication
-public class ZonaFitApplication implements CommandLineRunner {
+public class InfoEmpleoApplication implements CommandLineRunner {
 
 	@Autowired
 	private IClienteServicio clienteServicio;
 
 	private static final Logger logger =
-			LoggerFactory.getLogger(ZonaFitApplication.class);
+			LoggerFactory.getLogger(InfoEmpleoApplication.class);
 
 	String nl = System.lineSeparator();
 
 	public static void main(String[] args) {
 		logger.info("Iniciando la aplicacion");
 		// Levantar la fabrica de spring
-		SpringApplication.run(ZonaFitApplication.class, args);
+		SpringApplication.run(InfoEmpleoApplication.class, args);
 		logger.info("Aplicacion finalizada!");
 	}
 
