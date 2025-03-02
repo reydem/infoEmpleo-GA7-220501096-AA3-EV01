@@ -1,7 +1,7 @@
-package gm.zona_fit.controlador;
+package gm.info_empleo.controlador;
 
-import gm.zona_fit.modelo.Cliente;
-import gm.zona_fit.servicio.IClienteServicio;
+import gm.info_empleo.modelo.Cliente;
+import gm.info_empleo.servicio.IClienteServicio;
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;

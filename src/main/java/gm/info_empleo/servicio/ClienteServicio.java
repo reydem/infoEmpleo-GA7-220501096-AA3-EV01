@@ -1,7 +1,7 @@
-package gm.zona_fit.servicio;
+package gm.info_empleo.servicio;
 
-import gm.zona_fit.modelo.Cliente;
-import gm.zona_fit.repositorio.ClienteRepositorio;
+import gm.info_empleo.modelo.Cliente;
+import gm.info_empleo.repositorio.ClienteRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

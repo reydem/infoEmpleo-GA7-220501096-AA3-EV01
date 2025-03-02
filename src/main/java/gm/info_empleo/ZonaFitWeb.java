@@ -1,4 +1,4 @@
-package gm.zona_fit;
+package gm.info_empleo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

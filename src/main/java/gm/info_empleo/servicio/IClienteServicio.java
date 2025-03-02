@@ -1,6 +1,6 @@
-package gm.zona_fit.servicio;
+package gm.info_empleo.servicio;
 
-import gm.zona_fit.modelo.Cliente;
+import gm.info_empleo.modelo.Cliente;
 import java.util.List;
 
 public interface IClienteServicio {

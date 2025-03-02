@@ -1,4 +1,4 @@
-package gm.zona_fit.modelo;
+package gm.info_empleo.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

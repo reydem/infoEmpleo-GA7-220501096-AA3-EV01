@@ -1,7 +1,7 @@
-package gm.zona_fit;
+package gm.info_empleo;
 
-import gm.zona_fit.modelo.Cliente;
-import gm.zona_fit.servicio.IClienteServicio;
+import gm.info_empleo.modelo.Cliente;
+import gm.info_empleo.servicio.IClienteServicio;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

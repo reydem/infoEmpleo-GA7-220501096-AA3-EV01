@@ -1,8 +1,8 @@
-package gm.zona_fit.gui;
+package gm.info_empleo.gui;
 
-import gm.zona_fit.modelo.Cliente;
-import gm.zona_fit.servicio.ClienteServicio;
-import gm.zona_fit.servicio.IClienteServicio;
+import gm.info_empleo.modelo.Cliente;
+import gm.info_empleo.servicio.ClienteServicio;
+import gm.info_empleo.servicio.IClienteServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,7 @@
-package gm.zona_fit;
+package gm.info_empleo;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
-import gm.zona_fit.gui.ZonaFitForma;
+import gm.info_empleo.gui.ZonaFitForma;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
