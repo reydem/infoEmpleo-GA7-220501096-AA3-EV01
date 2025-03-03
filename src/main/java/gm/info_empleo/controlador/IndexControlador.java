@@ -97,23 +97,31 @@ public class IndexControlador {
 
     public void eliminarEmpleo() {
         if (this.empleoSeleccionado == null) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Advertencia", "Debe seleccionar un empleo para eliminar"));
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN, "Advertencia",
+                            "Debe seleccionar un empleo para eliminar"));
             return;
         }
 
         try {
             logger.info("Empleo a eliminar: " + this.empleoSeleccionado);
 
-            this.empleoServicio.eliminarEmpleo(this.empleoSeleccionado);
+            // Se pasa solo el ID en lugar del objeto completo
+            this.empleoServicio.eliminarEmpleo(this.empleoSeleccionado.getId());
             this.empleos.remove(this.empleoSeleccionado);
             this.empleoSeleccionado = null;
 
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Éxito", "Empleo eliminado"));
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_INFO, "Éxito",
+                            "Empleo eliminado"));
 
             PrimeFaces.current().ajax().update("forma-empleos:mensajes", "forma-empleos:empleos-tabla");
         } catch (Exception e) {
             logger.error("Error al eliminar el empleo: " + e.getMessage(), e);
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "No se pudo eliminar el empleo"));
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
+                            "No se pudo eliminar el empleo"));
         }
     }
+
 }
