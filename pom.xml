@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>gm</groupId>
-	<artifactId>zona_fit</artifactId>
+	<artifactId>info_empleo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>zona_fit</name>
-	<description>Sistema Zona Fit</description>
+	<description>info-empleo</description>
 	<properties>
 		<java.version>21</java.version>
 		<joinfaces.version>5.1.2</joinfaces.version>
