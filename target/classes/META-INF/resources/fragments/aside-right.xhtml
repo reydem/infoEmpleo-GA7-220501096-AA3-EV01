@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition>
+    <aside class="sticky top-8 hidden w-44 shrink-0 xl:block border-4 border-gray-400 mt-[70px] mr-[30px] mb-3">
+        <!-- Totales -->
+        <div class="col-md-12">
+            <div class="card text-center bg-danger text-white mb-3">
+                <div class="card-body">
+                    <h3>Salario Total</h3>
+                    <h4 class="display-6 text-lg font-bold">
+                        <h:outputText value="#{empleadoControlador.salarioTotal}">
+                            <f:convertNumber type="currency" />
+                        </h:outputText>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="card text-center bg-success text-white mb-3">
+                <div class="card-body">
+                    <h3>Total Empleados</h3>
+                    <h4 class="display-6">
+                        <i class="bi bi-people text-lg font-bold"></i>
+                        <h:outputText value="#{empleadoControlador.totalEmpleados}" />
+                    </h4>
+                </div>
+            </div>
+
+            <!-- Bloques estáticos (se repiten) -->
+            <div class="mt-4 -m-2.5 p-2.5 flex items-center text-gray-900 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75" />
+                </svg>
+                Empresa contratista
+            </div>
+            <!-- Puedes repetir bloques similares según sea necesario -->
+        </div>
+    </aside>
+</ui:composition>
+
+</html>

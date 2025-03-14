@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+<ui:composition>
+    <main class="flex-1 border-l-4 border-gray-400 bg-white">
+
+        <!-- Sección de búsqueda -->
+        <div>
+            <div class="ml-4 mt-3 grid grid-cols-1">
+                <p:inputText id="buscarEmpleado" placeholder="Buscar empleado..."
+                    styleClass="w-[550px] rounded-md border-2 border-gray-400" />
+            </div>
+        </div>
+
+        <!-- Contenedor principal -->
+        <div class="px-4 sm:px-6 lg:px-8 border-t-4 border-gray-400 mt-4">
+            <div class="sm:flex sm:items-center">
+                <div class="sm:flex-auto">
+                    <h1 class="text-base font-semibold text-gray-900">Control Empleados</h1>
+                </div>
+                <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                    <p:commandButton id="btnOpenModal" value="Agregar Empleado" icon="pi pi-plus"
+                        styleClass="ui-button-success" oncomplete="PF('ventanaModalEmpleo').show()" />
+                </div>
+            </div>
+
+            <!-- Tabla de empleados dentro de un formulario -->
+            <h:form id="forma-empleos">
+                <p:messages id="mensajes" showDetail="true" closable="true" />
+
+                <p:dataTable id="empleos-tabla" var="empleado" value="#{empleadoControlador.empleados}" paginator="true"
+                    rows="10" lazy="false" styleClass="min-w-full divide-y divide-gray-300">
+
+                    <p:column headerText="#" style="width:5%;">
+                        <h:outputText value="#{empleado.idEmpleado}" />
+                    </p:column>
+
+                    <p:column headerText="Nombre">
+                        <h:outputText value="#{empleado.nombre}" />
+                    </p:column>
+
+                    <p:column headerText="Empresa">
+                        <h:outputText value="#{empleado.empresa}" />
+                    </p:column>
+
+                    <p:column headerText="Descripción">
+                        <h:outputText value="#{empleado.descripcion}" />
+                    </p:column>
+
+                    <p:column headerText="Salario">
+                        <h:outputText value="#{empleado.salario}">
+                            <f:convertNumber type="currency" />
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column headerText="Acciones" style="width:20%;">
+                        <!-- Botón para editar -->
+                        <p:commandButton icon="pi pi-pencil"
+                            actionListener="#{empleadoControlador.editarEmpleado(empleado)}"
+                            styleClass="ui-button-warning mr-2" update=":formAgregarEmpleado"
+                            oncomplete="PF('ventanaModalEmpleo').show()" />
+
+                        <!-- Botón para eliminar -->
+                        <p:commandButton icon="pi pi-trash"
+                            actionListener="#{empleadoControlador.eliminarEmpleado(empleado.idEmpleado)}"
+                            styleClass="ui-button-danger" update=":forma-empleos"
+                            onclick="return confirm('¿Está seguro de eliminar este empleado?');" />
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </div>
+    </main>
+
+    <!-- ✅ Incluir el modal dentro de la jerarquía -->
+    <ui:include src="/fragments/empleado-modals.xhtml" />
+
+</ui:composition>
+
+</html>
