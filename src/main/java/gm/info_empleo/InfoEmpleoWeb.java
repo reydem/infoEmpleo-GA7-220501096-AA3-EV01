@@ -9,4 +9,5 @@ public class InfoEmpleoWeb {
     public static void main(String[] args) {
         SpringApplication.run(InfoEmpleoWeb.class, args);
     }
+    
 }
