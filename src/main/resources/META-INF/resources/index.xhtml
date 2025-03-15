@@ -25,34 +25,30 @@
         <h:outputStylesheet name="theme.css" />
     </h:head>
 
-    <h:body styleClass="bg-gray-900 text-white">
+    <h:body styleClass="bg-white text-gray-900">
         <div class="card">
-
-
             <h:form id="forma-empleos">
                 <p:growl id="mensajes" showDetails="true" />
 
-                <div class="bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                <div class="bg-white text-gray-900 p-4 rounded-lg shadow-md">
                     <p:menubar styleClass="flex space-x-4">
                         <p:menuitem value="Inicio" icon="pi pi-fw pi-user" update=":forma-empleos:empleos-tabla"
                             actionListener="#{indexControlador.cargarDatos}"
-                            styleClass="text-white hover:bg-gray-700 px-4 py-2 rounded" />
+                            styleClass="text-gray-900 hover:bg-gray-200 px-4 py-2 rounded" />
                         <p:menuitem value="Nuevo Empleo" icon="pi pi-fw pi-plus"
                             actionListener="#{indexControlador.agregarEmpleo}" update=":forma-modal:empleo-ventana"
                             oncomplete="PF('ventanaModalEmpleo').show()"
-                            styleClass="text-white hover:bg-gray-700 px-4 py-2 rounded" />
+                            styleClass="text-gray-900 hover:bg-gray-200 px-4 py-2 rounded" />
                     </p:menubar>
                 </div>
 
-                <div class="card">
+                <div class="card bg-white shadow-md p-4 rounded-lg">
                     <p:dataTable value="#{indexControlador.empleos}" var="empleo" id="empleos-tabla"
                         widgetVar="empleosTabla">
                         <f:facet name="header">
                             <div class="flex justify-center flex-wrap">
-                                <div class="flex items-center justify-center
-                        w-80 h-16 font-bold
-                        text-gray-900 rounded m-2">
-
+                                <div
+                                    class="flex items-center justify-center w-80 h-16 font-bold text-gray-900 rounded m-2">
                                     <h:graphicImage class="border-4 border-gray-400 rounded-[32px]" library="img"
                                         name="logo.png" style="width:300px; height:auto; " />
                                 </div>
@@ -139,4 +135,5 @@
             </h:form>
         </div>
     </h:body>
+
 </h:html>
